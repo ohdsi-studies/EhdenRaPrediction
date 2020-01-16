@@ -1,3 +1,23 @@
+Prediction of clinical outcomes after methotrexate initiation (EHDEN Study-a-thon Barcelona 2020)
+=================================================================================================
+
+<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
+
+- Analytics use case(s): **Patient Level Prediction**
+- Study type: **Patient-Level Prediction**
+- Tags: **EHDEN**
+- Study lead: **Ross Williams**
+- Study lead forums tag: **[Ross Williams](https://forums.ohdsi.org/u/rossw)**
+- Study start date: **January 16, 2020**
+- Study end date: **-**
+- Protocol: **-**
+- Publications: **-**
+- Results explorer: **-**
+
+Prediction of clinical outcomes after methotrexate initiation
+
+**NOTE:** The following information below requires review from the Study Coordinator before using the package.
+
 A Package Skeleton for Patientl-Level Prediction Studies
 ========================================================
 
