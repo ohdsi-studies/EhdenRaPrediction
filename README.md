@@ -18,21 +18,28 @@ Prediction of clinical outcomes after methotrexate initiation
 
 **NOTE:** The following information below requires review from the Study Coordinator before using the package.
 
-A Package Skeleton for Patientl-Level Prediction Studies
-========================================================
-
-A skeleton package, to be used as a starting point when implementing patient-level prediction studies.
-
-Vignette: [Using the package skeleton for patient-level prediction studies](https://raw.githubusercontent.com/OHDSI/StudyProtocolSandbox/master/EHDENRAPrediction/inst/doc/UsingSkeletonPackage.pdf)
-
-Instructions To Prepare Package Outside Atlas
+Introduction
 ===================
 
-- Step 1: Change package name, readme and description (replace (EHDENRAPrediction with the package name)
-- Step 2: Change all references of package name [in Main.R lines 101 and 126, CreateCohorts.R lines 27,37 and 42, CreateAllCohorts.R lines 62 and 77, readme.md and in PackageMaintenance.R]
-- Step 3: Add inst/settings/CohortToCreate.csv - a csv containing three columns, cohortId, atlasId and name - the cohorts in your local atlas with the atlasId will be downloaded into the package and given the cohortId cohort_definition_id when the user creates the cohorts.
-- Step 4: Create prediction analysis detail r code that specifies the models, populations, covariates, Ts and Os used in the study (extras/CreatePredictionAnalysisDetails)
-- Step 5: Run package management to extract cohorts (using CohortToCreate.csv) and create json specification (using extras/CreatePredictionAnalysisDetails.R)
+This is a package to train models to predict for
+Patients who are:
+[EHDEN RA] New users of methoxtrexate monotherapy used for PLP
+[EHDEN RA] Female new users of methoxtrexate monotherapy used for PLP (we are predicting breast and uterus cancer and so are limiting for these to female patients)
+
+Who will develop:
+[EHDEN RA] Stroke (ischemic or hemorrhagic) events (any visit)
+[EHDEN RA] Acute myocardial infarction events (in any visit)
+[EHDEN RA] Pancytopenia events using diagnoses and measurements
+[EHDEN RA] Opportunistic Infections
+[EHDEN RA] Serious Infection  events
+[EHDEN RA] Persons with a Malignant neoplasm of breast 1 dx
+[EHDEN RA] Persons with a Malignant neoplasm of uterus 1 dx
+[EHDEN RA] Persons with a Malignant neoplasm of colon and rectum 1 dx
+[EHDEN RA] Serious Infection, opportunistic infections and other infections of interest event
+[EHDEN RA] Leukopenia events using diagnoses and measurements
+[EHDEN RA] Pancytopenia or leukopenia events using diagnoses and measurements
+
+in 90-days, 2 years and 5 years time at risk.
 
 
 Instructions To Build Package
@@ -52,10 +59,10 @@ Instructions To Run Package
   PatientLevelPrediction::checkPlpInstallation()
   
   # install the network package
-  devtools::install_github("OHDSI/StudyProtocolSandbox/EHDENRAPrediction")
+  devtools::install_github("https://github.com/ohdsi-studies/EhdenRaPrediction")
 ```
 
-- Get users to execute the study by running the code in (extras/CodeToRun.R) but replace 'EHDENRAPrediction' with your study name:
+- To execute the study by running the code in (extras/CodeToRun.R)
 ```r
   library(EHDENRAPrediction)
   # USER INPUTS
