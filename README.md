@@ -38,7 +38,6 @@ Who will develop:
 [EHDEN RA] Serious Infection, opportunistic infections and other infections of interest event
 [EHDEN RA] Leukopenia events using diagnoses and measurements
 [EHDEN RA] Pancytopenia or leukopenia events using diagnoses and measurements
-
 in 90-days, 2 years and 5 years time at risk.
 
 
