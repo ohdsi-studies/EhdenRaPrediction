@@ -142,6 +142,7 @@ viewShiny('EHDENRAPrediction')
 
 ```
 
+Once you have sucessfully executed the study run you will find a compressed folder in the location specified by '[outputFolder]/[databaseName]' named 'resultsToShare.zip'. The study should remove sensitive data but we encourage researchers to also check the contents of this folder (it will contain a rds file with the results which can be loaded via readRDS('[file location]'). Please send the compressed folder results to Cynthia Yang c.yang AT erasmusmc.nl.
 
 # Development status
 Under development. Do not use
