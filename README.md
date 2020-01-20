@@ -7,7 +7,7 @@ Prediction of clinical outcomes after methotrexate initiation (EHDEN Study-a-tho
 - Study type: **Patient-Level Prediction**
 - Tags: **EHDEN**
 - Study lead: **Ross Williams**
-- Study lead forums tag: **[Ross Williams](https://forums.ohdsi.org/u/rossw)**
+- Study lead forums tag: **[rossw](https://forums.ohdsi.org/u/rossw)**
 - Study start date: **January 16, 2020**
 - Study end date: **-**
 - Protocol: **-**
