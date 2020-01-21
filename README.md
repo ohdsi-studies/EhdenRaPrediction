@@ -4,7 +4,7 @@ Prediction of clinical outcomes after methotrexate initiation (EHDEN Study-a-tho
 <img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
 
 - Analytics use case(s): **Patient Level Prediction**
-- Study type: **Patient-Level Prediction**
+- Study type: **Clinical Application**
 - Tags: **EHDEN**
 - Study lead: **Ross Williams**
 - Study lead forums tag: **[rossw](https://forums.ohdsi.org/u/rossw)**
