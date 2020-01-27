@@ -10,7 +10,7 @@ Prediction of clinical outcomes after methotrexate initiation (EHDEN Study-a-tho
 - Study lead forums tag: **[rossw](https://forums.ohdsi.org/u/rossw)**
 - Study start date: **January 16, 2020**
 - Study end date: **-**
-- Protocol: **-**
+- Protocol: [**Word file**](https://github.com/ohdsi-studies/EhdenRaPrediction/blob/master/documents/RA_PLP_protocol_27012020.docx)
 - Publications: **-**
 - Results explorer: **-**
 
