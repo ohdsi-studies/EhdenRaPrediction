@@ -26,6 +26,8 @@
 #' @param packageResults       Whether to package the results (after removing sensitive details)
 #' @param minCellCount         The min count for the result to be included in the package results
 #' @param sampleSize           Whether to sample from the target cohort - if desired add the number to sample
+#' @param keepPrediction       Whether to save the individual predictions
+#' @param verbosity            Log verbosity
 #' @export
 execute <- function(connectionDetails,
                     databaseName,
@@ -38,12 +40,14 @@ execute <- function(connectionDetails,
                     runValidation = T,
                     packageResults = T,
                     minCellCount = 5,
-                    sampleSize = NULL){
+                    sampleSize = NULL,
+                    keepPrediction = T,
+                    verbosity = 'INFO'){
 
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
 
-  ParallelLogger::addDefaultFileLogger(file.path(outputFolder, "log.txt"))
+  ParallelLogger::addDefaultFileLogger(file.path(outputFolder,databaseName, "log.txt"))
 
   if(createCohorts){
     ParallelLogger::logInfo("Creating Cohorts")
@@ -51,14 +55,15 @@ execute <- function(connectionDetails,
                   cdmDatabaseSchema=cdmDatabaseSchema,
                   cohortDatabaseSchema=cohortDatabaseSchema,
                   cohortTable=cohortTable,
-                  outputFolder = outputFolder)
+                  oracleTempSchema = oracleTempSchema,
+                  outputFolder = file.path(outputFolder,databaseName))
   }
 
   if(runValidation){
     ParallelLogger::logInfo("Validating Models")
     # for each model externally validate
     analysesLocation <- system.file("plp_models",
-                                    package = "EHDENRAPredictionValidation")
+                                    package = "EhdenRaPredictionValidation")
     val <- PatientLevelPrediction::evaluateMultiplePlp(analysesLocation = analysesLocation,
                                                        outputLocation = outputFolder,
                                                        connectionDetails = connectionDetails,
@@ -69,7 +74,9 @@ execute <- function(connectionDetails,
                                                        databaseNames = databaseName,
                                                        validationTableTarget = cohortTable,
                                                        validationTableOutcome = cohortTable,
-                                                       sampleSize = sampleSize)
+                                                       sampleSize = sampleSize,
+                                                       keepPrediction = keepPrediction,
+                                                       verbosity = verbosity)
   }
 
   # package the results: this creates a compressed file with sensitive details removed - ready to be reviewed and then

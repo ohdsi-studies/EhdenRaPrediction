@@ -51,38 +51,35 @@
       "firstExposureOnly": true
     }
   ],
-  "organizationName": "OHDSI",
+  "organizationName": "Janssen Research and Development",
   "targetIds": [
-    257,
-    258
+    21683,
+    21684
   ],
   "runPlpArgs": {
     "nfold": 3,
     "minCovariateFraction": 0.001,
-    "splitSeed": null,
+    "splitSeed": 42,
     "testSplit": "person",
     "testFraction": 0.25,
     "normalizeData": true
   },
-  "description": null,
   "version": "v2.7.0",
   "outcomeIds": [
-    253,
-    203,
-    197,
-    206,
-    208,
-    218,
-    185,
-    183,
-    260,
-    193,
-    259
+    21679,
+    21680,
+    21681,
+    14035,
+    14036,
+    14037,
+    14038,
+    21682,
+    14040,
+    14041,
+    14042
   ],
   "skeletonVersion": "v0.0.1",
-  "createdDate": "1579171288600",
   "conceptSetCrossReference": [],
-  "createdBy": null,
   "cohortDefinitions": [
     {
       "expression": {
@@ -8272,6 +8269,7 @@
                     }},
                     "Occurrence": {
                       "Type": 2,
+                      "CountColumn": null,
                       "IsDistinct": false,
                       "Count": 1
                     }
@@ -8304,6 +8302,7 @@
                     }},
                     "Occurrence": {
                       "Type": 2,
+                      "CountColumn": null,
                       "IsDistinct": false,
                       "Count": 1
                     }
@@ -8323,6 +8322,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -8338,6 +8338,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -8353,6 +8354,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }}
@@ -8364,14 +8366,14 @@
           }
         }
       },
-      "createdDate": "2020-01-15T08:51:27.755+0000",
+      "createdDate": null,
       "createdBy": null,
-      "name": "[EHDEN RA] Serious Infection, opportunistic infections and other infections of interest event",
-      "modifiedDate": "2020-01-15T21:41:24.178+0000",
+      "name": "[EHDEN RA] Serious Infection, opportunistic infections and other infections of interest event (2)",
+      "modifiedDate": null,
       "description": "The first condition record of Serious Infection",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 253
+      "id": 21679
     },
     {
       "expression": {
@@ -9352,6 +9354,7 @@
               }},
               "Occurrence": {
                 "Type": 2,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 1
               }
@@ -9384,6 +9387,7 @@
               }},
               "Occurrence": {
                 "Type": 2,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 1
               }
@@ -9409,6 +9413,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -9419,14 +9424,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T13:48:32.586+0000",
+      "createdDate": null,
       "createdBy": null,
-      "name": "[EHDEN RA] Serious Infection  events",
-      "modifiedDate": "2020-01-15T15:43:35.070+0000",
+      "name": "[EHDEN RA] Serious Infection  events (3)",
+      "modifiedDate": null,
       "description": "The first condition record of Serious Infection",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 203
+      "id": 21680
     },
     {
       "expression": {
@@ -10112,6 +10117,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -10122,14 +10128,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T12:42:14.298+0000",
+      "createdDate": null,
       "createdBy": null,
-      "name": "[EHDEN RA] Opportunistic Infections",
-      "modifiedDate": "2020-01-15T15:19:08.564+0000",
+      "name": "[EHDEN RA] Opportunistic Infections (3)",
+      "modifiedDate": null,
       "description": null,
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 197
+      "id": 21681
     },
     {
       "expression": {
@@ -10281,11 +10287,13 @@
                 "OccurrenceStartDate": null,
                 "ConditionType": null,
                 "ConditionSourceConcept": null,
+                "ConditionStatus": null,
                 "StopReason": null,
                 "Age": null
               }},
               "Occurrence": {
                 "Type": 0,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 0
               }
@@ -10311,6 +10319,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -10321,14 +10330,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T14:04:44.189+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Persons with a Malignant neoplasm of breast 1 dx",
-      "modifiedDate": "2020-01-14T15:18:34.748+0000",
+      "modifiedDate": null,
       "description": "First occurrence of Malignant neoplasm of breast, followed by at least one additional diagnosis of Malignant neoplasm of breast",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 206
+      "id": 14035
     },
     {
       "expression": {
@@ -10507,11 +10516,13 @@
                 "OccurrenceStartDate": null,
                 "ConditionType": null,
                 "ConditionSourceConcept": null,
+                "ConditionStatus": null,
                 "StopReason": null,
                 "Age": null
               }},
               "Occurrence": {
                 "Type": 0,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 0
               }
@@ -10537,6 +10548,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -10547,14 +10559,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T14:34:42.832+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Persons with a Malignant neoplasm of uterus 1 dx",
-      "modifiedDate": "2020-01-14T15:20:33.961+0000",
+      "modifiedDate": null,
       "description": "First occurrence of Malignant neoplasm of uterus",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 208
+      "id": 14036
     },
     {
       "expression": {
@@ -10750,11 +10762,13 @@
                 "OccurrenceStartDate": null,
                 "ConditionType": null,
                 "ConditionSourceConcept": null,
+                "ConditionStatus": null,
                 "StopReason": null,
                 "Age": null
               }},
               "Occurrence": {
                 "Type": 0,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 0
               }
@@ -10780,6 +10794,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -10790,14 +10805,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T14:51:29.731+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Persons with a Malignant neoplasm of colon and rectum 1 dx",
-      "modifiedDate": "2020-01-14T15:24:55.484+0000",
+      "modifiedDate": null,
       "description": "First occurrence of Malignant neoplasm of colon and rectum",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 218
+      "id": 14037
     },
     {
       "expression": {
@@ -10871,6 +10886,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -10881,14 +10897,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T11:03:40.513+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Acute myocardial infarction events (in any visit)",
-      "modifiedDate": "2020-01-14T11:04:16.090+0000",
+      "modifiedDate": null,
       "description": "Acute myocardial infarction condition record during any visit;  successive records with > 180 day gap are considered independent episodes",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 185
+      "id": 14038
     },
     {
       "expression": {
@@ -11047,6 +11063,7 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }}],
@@ -11057,14 +11074,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T11:01:27.545+0000",
+      "createdDate": null,
       "createdBy": null,
-      "name": "[EHDEN RA] Stroke (ischemic or hemorrhagic) events (any visit)",
-      "modifiedDate": "2020-01-16T12:05:05.236+0000",
+      "name": "[EHDEN RA] Stroke (ischemic or hemorrhagic) events (any visit) (2)",
+      "modifiedDate": null,
       "description": "Stroke (ischemic or hemorrhagic) condition record during any visit;  successive records with > 180 day gap are considered independent episodes",
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 183
+      "id": 21682
     },
     {
       "expression": {
@@ -11368,11 +11385,13 @@
                   "OccurrenceStartDate": null,
                   "ConditionType": null,
                   "ConditionSourceConcept": null,
+                  "ConditionStatus": null,
                   "StopReason": null,
                   "Age": null
                 }},
                 "Occurrence": {
                   "Type": 2,
+                  "CountColumn": null,
                   "IsDistinct": false,
                   "Count": 1
                 }
@@ -11405,11 +11424,13 @@
                   "OccurrenceStartDate": null,
                   "ConditionType": null,
                   "ConditionSourceConcept": null,
+                  "ConditionStatus": null,
                   "StopReason": null,
                   "Age": null
                 }},
                 "Occurrence": {
                   "Type": 2,
+                  "CountColumn": null,
                   "IsDistinct": false,
                   "Count": 1
                 }
@@ -11437,6 +11458,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -11452,6 +11474,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -11515,6 +11538,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }}
@@ -11526,14 +11550,14 @@
           }
         }
       },
-      "createdDate": "2020-01-16T13:02:32.025+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Pancytopenia or leukopenia events using diagnoses and measurements",
-      "modifiedDate": "2020-01-16T13:04:06.634+0000",
+      "modifiedDate": null,
       "description": null,
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 260
+      "id": 14040
     },
     {
       "expression": {
@@ -11756,11 +11780,13 @@
                 "OccurrenceStartDate": null,
                 "ConditionType": null,
                 "ConditionSourceConcept": null,
+                "ConditionStatus": null,
                 "StopReason": null,
                 "Age": null
               }},
               "Occurrence": {
                 "Type": 2,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 1
               }
@@ -11787,6 +11813,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -11802,6 +11829,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -11861,14 +11889,14 @@
           }
         }
       },
-      "createdDate": "2020-01-14T11:29:22.409+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Pancytopenia events using diagnoses and measurements",
-      "modifiedDate": "2020-01-16T12:58:47.777+0000",
+      "modifiedDate": null,
       "description": null,
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 193
+      "id": 14041
     },
     {
       "expression": {
@@ -12040,11 +12068,13 @@
                 "OccurrenceStartDate": null,
                 "ConditionType": null,
                 "ConditionSourceConcept": null,
+                "ConditionStatus": null,
                 "StopReason": null,
                 "Age": null
               }},
               "Occurrence": {
                 "Type": 2,
+                "CountColumn": null,
                 "IsDistinct": false,
                 "Count": 1
               }
@@ -12071,6 +12101,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -12086,6 +12117,7 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
@@ -12145,14 +12177,14 @@
           }
         }
       },
-      "createdDate": "2020-01-16T12:30:02.334+0000",
+      "createdDate": null,
       "createdBy": null,
       "name": "[EHDEN RA] Leukopenia events using diagnoses and measurements",
-      "modifiedDate": "2020-01-16T12:52:36.982+0000",
+      "modifiedDate": null,
       "description": null,
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 259
+      "id": 14042
     },
     {
       "expression": {
@@ -13360,7 +13392,7 @@
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "83901003",
                   "VOCABULARY_ID": "SNOMED",
-                  "CONCEPT_NAME": "Sjögren's syndrome",
+                  "CONCEPT_NAME": "Sjˆgren's syndrome",
                   "DOMAIN_ID": "Condition",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Clinical Finding",
@@ -14208,11 +14240,13 @@
                     "OccurrenceStartDate": null,
                     "ConditionType": null,
                     "ConditionSourceConcept": null,
+                    "ConditionStatus": null,
                     "StopReason": null,
                     "Age": null
                   }},
                   "Occurrence": {
                     "Type": 2,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 1
                   }
@@ -14253,6 +14287,7 @@
                   }},
                   "Occurrence": {
                     "Type": 2,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 1
                   }
@@ -14308,6 +14343,7 @@
                 }},
                 "Occurrence": {
                   "Type": 0,
+                  "CountColumn": null,
                   "IsDistinct": false,
                   "Count": 0
                 }
@@ -14362,6 +14398,7 @@
                 }},
                 "Occurrence": {
                   "Type": 0,
+                  "CountColumn": null,
                   "IsDistinct": true,
                   "Count": 1
                 }
@@ -14405,11 +14442,13 @@
                     "OccurrenceStartDate": null,
                     "ConditionType": null,
                     "ConditionSourceConcept": null,
+                    "ConditionStatus": null,
                     "StopReason": null,
                     "Age": null
                   }},
                   "Occurrence": {
                     "Type": 0,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 0
                   }
@@ -14450,6 +14489,7 @@
                   }},
                   "Occurrence": {
                     "Type": 0,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 0
                   }
@@ -14493,11 +14533,13 @@
                   "OccurrenceStartDate": null,
                   "ConditionType": null,
                   "ConditionSourceConcept": null,
+                  "ConditionStatus": null,
                   "StopReason": null,
                   "Age": null
                 }},
                 "Occurrence": {
                   "Type": 0,
+                  "CountColumn": null,
                   "IsDistinct": false,
                   "Count": 0
                 }
@@ -14541,14 +14583,14 @@
           }
         }
       },
-      "createdDate": "2020-01-16T10:12:13.237+0000",
+      "createdDate": null,
       "createdBy": null,
-      "name": "[EHDEN RA] New users of methoxtrexate monotherapy used for PLP",
-      "modifiedDate": "2020-01-16T10:27:09.652+0000",
+      "name": "[EHDEN RA] New users of methoxtrexate monotherapy used for PLP (1)",
+      "modifiedDate": null,
       "description": null,
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 257
+      "id": 21683
     },
     {
       "expression": {
@@ -15756,7 +15798,7 @@
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "83901003",
                   "VOCABULARY_ID": "SNOMED",
-                  "CONCEPT_NAME": "Sjögren's syndrome",
+                  "CONCEPT_NAME": "Sjˆgren's syndrome",
                   "DOMAIN_ID": "Condition",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Clinical Finding",
@@ -16604,11 +16646,13 @@
                     "OccurrenceStartDate": null,
                     "ConditionType": null,
                     "ConditionSourceConcept": null,
+                    "ConditionStatus": null,
                     "StopReason": null,
                     "Age": null
                   }},
                   "Occurrence": {
                     "Type": 2,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 1
                   }
@@ -16649,6 +16693,7 @@
                   }},
                   "Occurrence": {
                     "Type": 2,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 1
                   }
@@ -16704,6 +16749,7 @@
                 }},
                 "Occurrence": {
                   "Type": 0,
+                  "CountColumn": null,
                   "IsDistinct": false,
                   "Count": 0
                 }
@@ -16758,6 +16804,7 @@
                 }},
                 "Occurrence": {
                   "Type": 0,
+                  "CountColumn": null,
                   "IsDistinct": true,
                   "Count": 1
                 }
@@ -16801,11 +16848,13 @@
                     "OccurrenceStartDate": null,
                     "ConditionType": null,
                     "ConditionSourceConcept": null,
+                    "ConditionStatus": null,
                     "StopReason": null,
                     "Age": null
                   }},
                   "Occurrence": {
                     "Type": 0,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 0
                   }
@@ -16846,6 +16895,7 @@
                   }},
                   "Occurrence": {
                     "Type": 0,
+                    "CountColumn": null,
                     "IsDistinct": false,
                     "Count": 0
                   }
@@ -16889,11 +16939,13 @@
                   "OccurrenceStartDate": null,
                   "ConditionType": null,
                   "ConditionSourceConcept": null,
+                  "ConditionStatus": null,
                   "StopReason": null,
                   "Age": null
                 }},
                 "Occurrence": {
                   "Type": 0,
+                  "CountColumn": null,
                   "IsDistinct": false,
                   "Count": 0
                 }
@@ -16948,22 +17000,21 @@
           }
         }
       },
-      "createdDate": "2020-01-16T10:28:39.730+0000",
+      "createdDate": null,
       "createdBy": null,
-      "name": "[EHDEN RA] Female new users of methoxtrexate monotherapy used for PLP",
-      "modifiedDate": "2020-01-16T10:29:45.807+0000",
+      "name": "[EHDEN RA] Female new users of methoxtrexate monotherapy used for PLP (1)",
+      "modifiedDate": null,
       "description": null,
-      "expressionType": "SIMPLE_EXPRESSION",
+      "expressionType": null,
       "modifiedBy": null,
-      "id": 258
+      "id": 21684
     }
   ],
   "modelSettings": [{"LassoLogisticRegressionSettings": {
     "seed": null,
     "variance": 0.01
   }}],
-  "name": "[EHDEN RA] Prediction of clinical outcomes after methotrexate initiation",
-  "modifiedDate": "1579177505915",
+  "name": "[CY EHDEN RA] Prediction of clinical outcomes after methotrexate initiation (updated)",
   "covariateSettings": [
     {
       "VisitCountMediumTerm": false,
@@ -16981,125 +17032,7 @@
       "DrugGroupEraShortTerm": true,
       "ConditionEraStartLongTerm": false,
       "temporal": false,
-      "DemographicsIndexMonth": true,
-      "ConditionOccurrencePrimaryInpatientLongTerm": false,
-      "ConditionEraAnyTimePrior": false,
-      "addDescendantsToInclude": false,
-      "ConditionGroupEraStartMediumTerm": false,
-      "ProcedureOccurrenceLongTerm": false,
-      "DrugExposureLongTerm": false,
-      "DrugEraStartShortTerm": false,
-      "DistinctIngredientCountMediumTerm": false,
-      "DistinctMeasurementCountShortTerm": false,
-      "MeasurementRangeGroupLongTerm": false,
-      "ConditionGroupEraOverlapping": false,
-      "attr_fun": "getDbDefaultCovariateData",
-      "MeasurementRangeGroupMediumTerm": false,
-      "DrugGroupEraStartMediumTerm": false,
-      "MeasurementAnyTimePrior": false,
-      "MeasurementMediumTerm": false,
-      "includedCovariateIds": [],
-      "ConditionOccurrenceAnyTimePrior": true,
-      "DistinctConditionCountLongTerm": false,
-      "MeasurementValueLongTerm": false,
-      "DrugEraShortTerm": false,
-      "DrugGroupEraAnyTimePrior": false,
-      "DrugEraOverlapping": false,
-      "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
-      "ConditionEraMediumTerm": false,
-      "ConditionEraOverlapping": false,
-      "ConditionEraStartShortTerm": false,
-      "ObservationAnyTimePrior": false,
-      "VisitConceptCountShortTerm": false,
-      "DemographicsEthnicity": false,
-      "DistinctIngredientCountLongTerm": false,
-      "ConditionOccurrencePrimaryInpatientShortTerm": false,
-      "DemographicsAgeGroup": true,
-      "DistinctProcedureCountShortTerm": false,
-      "DistinctObservationCountMediumTerm": false,
-      "includedCovariateConceptIds": [],
-      "DrugGroupEraStartShortTerm": false,
-      "addDescendantsToExclude": false,
-      "DrugEraLongTerm": false,
-      "DistinctConditionCountShortTerm": false,
-      "ConditionGroupEraShortTerm": false,
-      "ConditionEraStartMediumTerm": false,
-      "VisitCountLongTerm": false,
-      "DemographicsRace": false,
-      "ProcedureOccurrenceAnyTimePrior": false,
-      "DistinctObservationCountLongTerm": false,
-      "attr_class": "covariateSettings",
-      "ProcedureOccurrenceMediumTerm": false,
-      "CharlsonIndex": true,
-      "DemographicsPriorObservationTime": false,
-      "MeasurementShortTerm": false,
-      "DistinctProcedureCountMediumTerm": false,
-      "ConditionEraLongTerm": false,
-      "DrugGroupEraStartLongTerm": false,
-      "DemographicsGender": true,
-      "DeviceExposureAnyTimePrior": false,
-      "ObservationLongTerm": false,
-      "DemographicsIndexYearMonth": false,
-      "ConditionOccurrenceMediumTerm": false,
-      "longTermStartDays": -365,
-      "DemographicsAge": true,
-      "DrugGroupEraOverlapping": false,
-      "DistinctMeasurementCountLongTerm": false,
-      "MeasurementRangeGroupAnyTimePrior": false,
-      "DistinctConditionCountMediumTerm": false,
-      "DrugGroupEraMediumTerm": false,
-      "ProcedureOccurrenceShortTerm": false,
-      "ObservationMediumTerm": false,
-      "ConditionGroupEraAnyTimePrior": false,
-      "Chads2": false,
-      "DrugExposureAnyTimePrior": false,
-      "DeviceExposureLongTerm": false,
-      "DemographicsTimeInCohort": false,
-      "DistinctMeasurementCountMediumTerm": false,
-      "MeasurementValueShortTerm": false,
-      "DeviceExposureMediumTerm": false,
-      "ConditionGroupEraStartShortTerm": false,
-      "ConditionOccurrencePrimaryInpatientMediumTerm": false,
-      "MeasurementLongTerm": false,
-      "DemographicsIndexYear": false,
-      "MeasurementValueMediumTerm": false,
-      "DrugEraStartMediumTerm": false,
-      "MeasurementValueAnyTimePrior": false,
-      "DistinctObservationCountShortTerm": false,
-      "DrugEraMediumTerm": false,
-      "ConditionGroupEraLongTerm": false,
-      "DrugExposureShortTerm": false,
-      "DistinctIngredientCountShortTerm": false,
-      "DeviceExposureShortTerm": false,
-      "mediumTermStartDays": -180,
-      "DemographicsPostObservationTime": false,
-      "VisitConceptCountLongTerm": false,
-      "VisitConceptCountMediumTerm": false,
-      "excludedCovariateConceptIds": [],
-      "ConditionGroupEraMediumTerm": false,
-      "DrugExposureMediumTerm": false,
-      "DistinctProcedureCountLongTerm": false,
-      "DrugEraAnyTimePrior": false,
-      "endDays": 0,
-      "ConditionOccurrenceShortTerm": false
-    },
-    {
-      "VisitCountMediumTerm": false,
-      "ObservationShortTerm": false,
-      "shortTermStartDays": -30,
-      "MeasurementRangeGroupShortTerm": false,
-      "ConditionOccurrenceLongTerm": false,
-      "DrugEraStartLongTerm": false,
-      "VisitCountShortTerm": false,
-      "Chads2Vasc": true,
-      "ConditionGroupEraStartLongTerm": false,
-      "ConditionEraShortTerm": false,
-      "Dcsi": true,
-      "DrugGroupEraLongTerm": false,
-      "DrugGroupEraShortTerm": false,
-      "ConditionEraStartLongTerm": false,
-      "temporal": false,
-      "DemographicsIndexMonth": true,
+      "DemographicsIndexMonth": false,
       "ConditionOccurrencePrimaryInpatientLongTerm": false,
       "ConditionEraAnyTimePrior": false,
       "addDescendantsToInclude": false,
@@ -17200,10 +17133,245 @@
       "DrugEraAnyTimePrior": false,
       "endDays": 0,
       "ConditionOccurrenceShortTerm": false
+    },
+    {
+      "VisitCountMediumTerm": false,
+      "ObservationShortTerm": false,
+      "shortTermStartDays": -30,
+      "MeasurementRangeGroupShortTerm": false,
+      "ConditionOccurrenceLongTerm": false,
+      "DrugEraStartLongTerm": false,
+      "VisitCountShortTerm": false,
+      "Chads2Vasc": true,
+      "ConditionGroupEraStartLongTerm": false,
+      "ConditionEraShortTerm": false,
+      "Dcsi": true,
+      "DrugGroupEraLongTerm": false,
+      "DrugGroupEraShortTerm": false,
+      "ConditionEraStartLongTerm": false,
+      "temporal": false,
+      "DemographicsIndexMonth": false,
+      "ConditionOccurrencePrimaryInpatientLongTerm": false,
+      "ConditionEraAnyTimePrior": false,
+      "addDescendantsToInclude": false,
+      "ConditionGroupEraStartMediumTerm": false,
+      "ProcedureOccurrenceLongTerm": false,
+      "DrugExposureLongTerm": false,
+      "DrugEraStartShortTerm": false,
+      "DistinctIngredientCountMediumTerm": false,
+      "DistinctMeasurementCountShortTerm": false,
+      "MeasurementRangeGroupLongTerm": false,
+      "ConditionGroupEraOverlapping": false,
+      "attr_fun": "getDbDefaultCovariateData",
+      "MeasurementRangeGroupMediumTerm": false,
+      "DrugGroupEraStartMediumTerm": false,
+      "MeasurementAnyTimePrior": false,
+      "MeasurementMediumTerm": false,
+      "includedCovariateIds": [],
+      "ConditionOccurrenceAnyTimePrior": true,
+      "DistinctConditionCountLongTerm": false,
+      "MeasurementValueLongTerm": false,
+      "DrugEraShortTerm": false,
+      "DrugGroupEraAnyTimePrior": false,
+      "DrugEraOverlapping": false,
+      "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+      "ConditionEraMediumTerm": false,
+      "ConditionEraOverlapping": false,
+      "ConditionEraStartShortTerm": false,
+      "ObservationAnyTimePrior": false,
+      "VisitConceptCountShortTerm": false,
+      "DemographicsEthnicity": false,
+      "DistinctIngredientCountLongTerm": false,
+      "ConditionOccurrencePrimaryInpatientShortTerm": false,
+      "DemographicsAgeGroup": true,
+      "DistinctProcedureCountShortTerm": false,
+      "DistinctObservationCountMediumTerm": false,
+      "includedCovariateConceptIds": [],
+      "DrugGroupEraStartShortTerm": false,
+      "addDescendantsToExclude": false,
+      "DrugEraLongTerm": false,
+      "DistinctConditionCountShortTerm": false,
+      "ConditionGroupEraShortTerm": false,
+      "ConditionEraStartMediumTerm": false,
+      "VisitCountLongTerm": false,
+      "DemographicsRace": false,
+      "ProcedureOccurrenceAnyTimePrior": false,
+      "DistinctObservationCountLongTerm": false,
+      "attr_class": "covariateSettings",
+      "ProcedureOccurrenceMediumTerm": false,
+      "CharlsonIndex": true,
+      "DemographicsPriorObservationTime": false,
+      "MeasurementShortTerm": false,
+      "DistinctProcedureCountMediumTerm": false,
+      "ConditionEraLongTerm": false,
+      "DrugGroupEraStartLongTerm": false,
+      "DemographicsGender": true,
+      "DeviceExposureAnyTimePrior": false,
+      "ObservationLongTerm": false,
+      "DemographicsIndexYearMonth": false,
+      "ConditionOccurrenceMediumTerm": false,
+      "longTermStartDays": -365,
+      "DemographicsAge": false,
+      "DrugGroupEraOverlapping": false,
+      "DistinctMeasurementCountLongTerm": false,
+      "MeasurementRangeGroupAnyTimePrior": false,
+      "DistinctConditionCountMediumTerm": false,
+      "DrugGroupEraMediumTerm": false,
+      "ProcedureOccurrenceShortTerm": false,
+      "ObservationMediumTerm": false,
+      "ConditionGroupEraAnyTimePrior": false,
+      "Chads2": false,
+      "DrugExposureAnyTimePrior": false,
+      "DeviceExposureLongTerm": false,
+      "DemographicsTimeInCohort": false,
+      "DistinctMeasurementCountMediumTerm": false,
+      "MeasurementValueShortTerm": false,
+      "DeviceExposureMediumTerm": false,
+      "ConditionGroupEraStartShortTerm": false,
+      "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+      "MeasurementLongTerm": false,
+      "DemographicsIndexYear": false,
+      "MeasurementValueMediumTerm": false,
+      "DrugEraStartMediumTerm": false,
+      "MeasurementValueAnyTimePrior": false,
+      "DistinctObservationCountShortTerm": false,
+      "DrugEraMediumTerm": false,
+      "ConditionGroupEraLongTerm": false,
+      "DrugExposureShortTerm": false,
+      "DistinctIngredientCountShortTerm": false,
+      "DeviceExposureShortTerm": false,
+      "mediumTermStartDays": -180,
+      "DemographicsPostObservationTime": false,
+      "VisitConceptCountLongTerm": false,
+      "VisitConceptCountMediumTerm": false,
+      "excludedCovariateConceptIds": [],
+      "ConditionGroupEraMediumTerm": false,
+      "DrugExposureMediumTerm": false,
+      "DistinctProcedureCountLongTerm": false,
+      "DrugEraAnyTimePrior": false,
+      "endDays": 0,
+      "ConditionOccurrenceShortTerm": false
+    },
+    {
+      "VisitCountMediumTerm": false,
+      "ObservationShortTerm": false,
+      "shortTermStartDays": -30,
+      "MeasurementRangeGroupShortTerm": false,
+      "ConditionOccurrenceLongTerm": false,
+      "DrugEraStartLongTerm": false,
+      "VisitCountShortTerm": false,
+      "Chads2Vasc": false,
+      "ConditionGroupEraStartLongTerm": false,
+      "ConditionEraShortTerm": false,
+      "Dcsi": false,
+      "DrugGroupEraLongTerm": false,
+      "DrugGroupEraShortTerm": false,
+      "ConditionEraStartLongTerm": false,
+      "temporal": false,
+      "DemographicsIndexMonth": false,
+      "ConditionOccurrencePrimaryInpatientLongTerm": false,
+      "ConditionEraAnyTimePrior": false,
+      "addDescendantsToInclude": false,
+      "ConditionGroupEraStartMediumTerm": false,
+      "ProcedureOccurrenceLongTerm": false,
+      "DrugExposureLongTerm": false,
+      "DrugEraStartShortTerm": false,
+      "DistinctIngredientCountMediumTerm": false,
+      "DistinctMeasurementCountShortTerm": false,
+      "MeasurementRangeGroupLongTerm": false,
+      "ConditionGroupEraOverlapping": false,
+      "attr_fun": "getDbDefaultCovariateData",
+      "MeasurementRangeGroupMediumTerm": false,
+      "DrugGroupEraStartMediumTerm": false,
+      "MeasurementAnyTimePrior": false,
+      "MeasurementMediumTerm": false,
+      "includedCovariateIds": [],
+      "ConditionOccurrenceAnyTimePrior": false,
+      "DistinctConditionCountLongTerm": false,
+      "MeasurementValueLongTerm": false,
+      "DrugEraShortTerm": false,
+      "DrugGroupEraAnyTimePrior": false,
+      "DrugEraOverlapping": false,
+      "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+      "ConditionEraMediumTerm": false,
+      "ConditionEraOverlapping": false,
+      "ConditionEraStartShortTerm": false,
+      "ObservationAnyTimePrior": false,
+      "VisitConceptCountShortTerm": false,
+      "DemographicsEthnicity": false,
+      "DistinctIngredientCountLongTerm": false,
+      "ConditionOccurrencePrimaryInpatientShortTerm": false,
+      "DemographicsAgeGroup": true,
+      "DistinctProcedureCountShortTerm": false,
+      "DistinctObservationCountMediumTerm": false,
+      "includedCovariateConceptIds": [],
+      "DrugGroupEraStartShortTerm": false,
+      "addDescendantsToExclude": false,
+      "DrugEraLongTerm": false,
+      "DistinctConditionCountShortTerm": false,
+      "ConditionGroupEraShortTerm": false,
+      "ConditionEraStartMediumTerm": false,
+      "VisitCountLongTerm": false,
+      "DemographicsRace": false,
+      "ProcedureOccurrenceAnyTimePrior": false,
+      "DistinctObservationCountLongTerm": false,
+      "attr_class": "covariateSettings",
+      "ProcedureOccurrenceMediumTerm": false,
+      "CharlsonIndex": false,
+      "DemographicsPriorObservationTime": false,
+      "MeasurementShortTerm": false,
+      "DistinctProcedureCountMediumTerm": false,
+      "ConditionEraLongTerm": false,
+      "DrugGroupEraStartLongTerm": false,
+      "DemographicsGender": true,
+      "DeviceExposureAnyTimePrior": false,
+      "ObservationLongTerm": false,
+      "DemographicsIndexYearMonth": false,
+      "ConditionOccurrenceMediumTerm": false,
+      "longTermStartDays": -365,
+      "DemographicsAge": false,
+      "DrugGroupEraOverlapping": false,
+      "DistinctMeasurementCountLongTerm": false,
+      "MeasurementRangeGroupAnyTimePrior": false,
+      "DistinctConditionCountMediumTerm": false,
+      "DrugGroupEraMediumTerm": false,
+      "ProcedureOccurrenceShortTerm": false,
+      "ObservationMediumTerm": false,
+      "ConditionGroupEraAnyTimePrior": false,
+      "Chads2": false,
+      "DrugExposureAnyTimePrior": false,
+      "DeviceExposureLongTerm": false,
+      "DemographicsTimeInCohort": false,
+      "DistinctMeasurementCountMediumTerm": false,
+      "MeasurementValueShortTerm": false,
+      "DeviceExposureMediumTerm": false,
+      "ConditionGroupEraStartShortTerm": false,
+      "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+      "MeasurementLongTerm": false,
+      "DemographicsIndexYear": false,
+      "MeasurementValueMediumTerm": false,
+      "DrugEraStartMediumTerm": false,
+      "MeasurementValueAnyTimePrior": false,
+      "DistinctObservationCountShortTerm": false,
+      "DrugEraMediumTerm": false,
+      "ConditionGroupEraLongTerm": false,
+      "DrugExposureShortTerm": false,
+      "DistinctIngredientCountShortTerm": false,
+      "DeviceExposureShortTerm": false,
+      "mediumTermStartDays": -180,
+      "DemographicsPostObservationTime": false,
+      "VisitConceptCountLongTerm": false,
+      "VisitConceptCountMediumTerm": false,
+      "excludedCovariateConceptIds": [],
+      "ConditionGroupEraMediumTerm": false,
+      "DrugExposureMediumTerm": false,
+      "DistinctProcedureCountLongTerm": false,
+      "DrugEraAnyTimePrior": false,
+      "endDays": 0,
+      "ConditionOccurrenceShortTerm": false
     }
   ],
-  "modifiedBy": null,
   "conceptSets": [],
-  "id": 6,
-  "packageName": "EHDENRAPredictionValidation"
+  "id": 218,
+  "packageName": "EhdenRaPredictionValidation"
 }

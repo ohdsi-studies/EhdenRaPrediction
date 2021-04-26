@@ -1,6 +1,6 @@
-# Copyright 2018 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredictionNetworkStudySkeleton
+# This file is part of EhdenRaPredictionValidation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ packageResults <- function(outputFolder,
   if(length(grep('inst/plp_models', folders))>0){
     folders <- folders[-grep('inst/plp_models', folders)] #in case using package directory
   }
-  
+
   if(length(folders)==0){
     stop('No results to export...')
     }

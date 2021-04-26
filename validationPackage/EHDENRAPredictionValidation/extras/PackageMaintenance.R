@@ -1,6 +1,6 @@
-# Copyright 2018 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of EHDENRAPredictionValidation
+# This file is part of EhdenRaPredictionValidation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,16 +16,16 @@
 
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
-OhdsiRTools::checkUsagePackage("EHDENRAPredictionValidation")
+OhdsiRTools::checkUsagePackage("EhdenRaPredictionValidation")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-shell("rm extras/EHDENRAPredictionValidation.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/EHDENRAPredictionValidation.pdf")
+shell("rm extras/EhdenRaPredictionValidation.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/EhdenRaPredictionValidation.pdf")
 
 # Create vignette ---------------------------------------------------------
-rmarkdown::render("vignettes/UsingSkeletonPackage.Rmd",
-                  output_file = "../inst/doc/UsingSkeletonPackage.pdf",
+rmarkdown::render("vignettes/UsingSkeletonPredictionValidationPackage.Rmd",
+                  output_file = "../inst/doc/UsingSkeletonPredictionValidationPackage.pdf",
                   rmarkdown::pdf_document(latex_engine = "pdflatex",
                                           toc = TRUE,
                                           number_sections = TRUE))
@@ -36,7 +36,7 @@ OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv"
                                                 insertTableSql = TRUE,
                                                 insertCohortCreationR = TRUE,
                                                 generateStats = FALSE,
-                                                packageName = "EHDENRAPredictionValidation")
+                                                packageName = "EhdenRaPredictionValidation")
 
 # transport the plp models -------------------------------------------------
 transportPlpModels(analysesDir= "modelFolder",
@@ -44,4 +44,4 @@ transportPlpModels(analysesDir= "modelFolder",
                    databaseName = 'sharable name of development data')
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("EHDENRAPredictionValidation")
+OhdsiRTools::insertEnvironmentSnapshotInPackage("EhdenRaPredictionValidation")

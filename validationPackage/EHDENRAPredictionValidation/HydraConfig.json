@@ -5,11 +5,11 @@
 "actions":[{
 "type": "fileNameFindAndReplace",
 "input": "packageName",
-"find": "EHDENRAPredictionValidation"
+"find": "EhdenRaPredictionValidation"
 },{
 "type": "stringFindAndReplace",
 "input": "packageName",
-"find": "EHDENRAPredictionValidation"
+"find": "EhdenRaPredictionValidation"
 },{
 "type": "jsonArrayToCsv",
 "input": "cohortDefinitions",

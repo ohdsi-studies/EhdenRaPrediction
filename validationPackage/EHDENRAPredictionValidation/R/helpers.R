@@ -1,6 +1,6 @@
-# Copyright 2018 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of EHDENRAPredictionValidation
+# This file is part of EhdenRaPredictionValidation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -59,7 +59,7 @@ createCohorts <- function(connectionDetails,
   # Check number of subjects per cohort:
   ParallelLogger::logInfo("Counting cohorts")
   sql <- SqlRender::loadRenderTranslateSql("GetCounts.sql",
-                                           "EHDENRAPredictionValidation",
+                                           "EhdenRaPredictionValidation",
                                            dbms = connectionDetails$dbms,
                                            oracleTempSchema = oracleTempSchema,
                                            cdm_database_schema = cdmDatabaseSchema,
@@ -74,7 +74,7 @@ createCohorts <- function(connectionDetails,
 }
 
 addCohortNames <- function(data, IdColumnName = "cohortDefinitionId", nameColumnName = "cohortName") {
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "EHDENRAPredictionValidation")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "EhdenRaPredictionValidation")
   cohortsToCreate <- utils::read.csv(pathToCsv)
 
   idToName <- data.frame(cohortId = c(cohortsToCreate$cohortId),
@@ -102,7 +102,7 @@ addCohortNames <- function(data, IdColumnName = "cohortDefinitionId", nameColumn
 
   # Create study cohort table structure:
   sql <- SqlRender::loadRenderTranslateSql(sqlFilename = "CreateCohortTable.sql",
-                                           packageName = "EHDENRAPredictionValidation",
+                                           packageName = "EhdenRaPredictionValidation",
                                            dbms = attr(connection, "dbms"),
                                            oracleTempSchema = oracleTempSchema,
                                            cohort_database_schema = cohortDatabaseSchema,
@@ -112,12 +112,12 @@ addCohortNames <- function(data, IdColumnName = "cohortDefinitionId", nameColumn
 
 
   # Instantiate cohorts:
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "EHDENRAPredictionValidation")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "EhdenRaPredictionValidation")
   cohortsToCreate <- utils::read.csv(pathToCsv)
   for (i in 1:nrow(cohortsToCreate)) {
     writeLines(paste("Creating cohort:", cohortsToCreate$name[i]))
     sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortsToCreate$name[i], ".sql"),
-                                             packageName = "EHDENRAPredictionValidation",
+                                             packageName = "EhdenRaPredictionValidation",
                                              dbms = attr(connection, "dbms"),
                                              oracleTempSchema = oracleTempSchema,
                                              cdm_database_schema = cdmDatabaseSchema,
@@ -127,6 +127,35 @@ addCohortNames <- function(data, IdColumnName = "cohortDefinitionId", nameColumn
                                              target_cohort_table = cohortTable,
                                              target_cohort_id = cohortsToCreate$cohortId[i])
     DatabaseConnector::executeSql(connection, sql)
+  }
+
+
+  pathToCustom <- system.file("settings", 'cohortVariableSetting.csv', package = "EhdenRaPredictionValidation")
+  if(pathToCustom!=""){
+    # if custom cohort covaraites set:
+    cohortVarsToCreate <- utils::read.csv(pathToCustom)
+
+    if(sum(colnames(cohortVarsToCreate)%in%c('atlasId', 'cohortName', 'startDay', 'endDay'))!=4){
+      stop('Issue with cohortVariableSetting - make sure it is NULL or a setting')
+    }
+
+    cohortVarsToCreate <- unique(cohortVarsToCreate[,c('atlasId', 'cohortName')])
+    for (i in 1:nrow(cohortVarsToCreate)) {
+      writeLines(paste("Creating cohort:", cohortVarsToCreate$cohortName[i]))
+      sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortVarsToCreate$cohortName[i], ".sql"),
+                                               packageName = "EhdenRaPredictionValidation",
+                                               dbms = attr(connection, "dbms"),
+                                               oracleTempSchema = oracleTempSchema,
+                                               cdm_database_schema = cdmDatabaseSchema,
+                                               vocabulary_database_schema = vocabularyDatabaseSchema,
+
+                                               target_database_schema = cohortDatabaseSchema,
+                                               target_cohort_table = cohortTable,
+                                               target_cohort_id = cohortVarsToCreate$atlasId[i])
+      DatabaseConnector::executeSql(connection, sql)
+    }
+
+
   }
 }
 

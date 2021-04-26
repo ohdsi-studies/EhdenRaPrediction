@@ -1,38 +1,59 @@
-EHDENRAPredictionValidation
+EhdenRaPredictionValidation
 ======================
 
-  Introduction
+Introduction
 ============
-  Add the background for this study here
-
+This package contains code to externally validate models for the prediction quesiton <add question> developed on the database <add database>.
 
 Features
 ========
-  - what does the study do as the main thing
-  - what else does it do?
+  - Applies models developed using the OHDSI PatientLevelPrediction package
+  - Evaluates the performance of the models on new data
+  - Packages up the results (after removing sensitive date) to share with study owner
 
 Technology
 ==========
-  EHDENRAPredictionValidation is an R package.
+  EhdenRaPredictionValidation is an R package.
 
 System Requirements
 ===================
-  Requires R (version 3.3.0 or higher).
+  * Requires: OMOP CDM database and connection details
+  * Requires: Java runtime enviroment (for the database connection)
+  * Requires: R (version 3.3.0 or higher).
+  * Sometimes required: Python 
 
 Dependencies
 ============
   * PatientLevelPrediction
-
-Getting Started
+  
+Guide
+============
+A general guide for running a valdiation study package is available here: [Skeleton Validation Study guide](https://github.com/OHDSI/EhdenRaPredictionValidation/tree/master/inst/doc/UsingSkeletonValidationPackage.pdf)
+  
+  
+A1. Installing the package from GitHub
 ===============
-  1. In R, use the following commands to run the study:
+```r
+# To install the package from github:
+install.packages("devtools")
+devtools::install_github("ohdsi-studies/EhdenRaPredictionValidation")
+```
 
-  ```r
-  # If not building locally uncomment and run:
-#install.packages("devtools")
-#devtools::install_github("OHDSI/StudyProtocolSandbox/EHDENRAPredictionValidation")
+A2. Building the package inside RStudio
+===============
+  1. Open the validation package project file (file ending in .Rproj) 
+  2. Build the package in RStudio by selecting the 'Build' option in the top right (the tabs contain  'Environment', 'History', 'Connections', 'Build', 'Git') and then clicking on the 'Install and Restart'
 
-library(EHDENRAPredictionValidation)
+B. Getting Started
+===============
+  1. Make sure to have either: installed (A1) or built (A2) the package 
+  2. In R, run the code in 'extras/codeToRun.R' (see [Skeleton Validation Study guide](https://github.com/OHDSI/EhdenRaPredictionValidation/tree/master/inst/doc/UsingSkeletonValidationPackage.pdf) for guideance)
+
+
+C. Example Code
+===============
+```r
+library(EhdenRaPredictionValidation)
 
 # add details of your database setting:
 databaseName <- 'add a shareable name for the database you are currently validating on'
@@ -47,10 +68,13 @@ cohortDatabaseSchema <- 'your work database schema'
 oracleTempSchema <- NULL
 
 # the name of the table that will be created in cohortDatabaseSchema to hold the cohorts
-cohortTable <- 'EHDENRAPredictionValidationCohortTable'
+cohortTable <- 'EhdenRaPredictionValidationCohortTable'
 
 # the location to save the prediction models results to:
-outputFolder <- getwd()
+# NOTE: if you set the outputFolder to the 'Validation' directory in the 
+#       prediction study outputFolder then the external validation will be
+#       saved in a format that can be used by the shiny app 
+outputFolder <- '../Validation'
 
 # add connection details:
 options(fftempdir = 'T:/fftemp')
@@ -65,8 +89,8 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
                                                                 password = pw,
                                                                 port = port)
 
-# Now run the study
-EHDENRAPredictionValidation::execute(connectionDetails = connectionDetails,
+# Now run the study:
+EhdenRaPredictionValidation::execute(connectionDetails = connectionDetails,
                  databaseName = databaseName,
                  cdmDatabaseSchema = cdmDatabaseSchema,
                  cohortDatabaseSchema = cohortDatabaseSchema,
@@ -75,19 +99,45 @@ EHDENRAPredictionValidation::execute(connectionDetails = connectionDetails,
                  outputFolder = outputFolder,
                  createCohorts = T,
                  runValidation = T,
-                 packageResults = T,
+                 packageResults = F,
                  minCellCount = 5,
                  sampleSize = NULL)
                  
-# add code to submit results to study admin here
-
-
+# If the validation study runs to completion and returns results, package it up ready to share with the study owner (but remove counts less than 10) by running:
+EhdenRaPredictionValidation::execute(connectionDetails = connectionDetails,
+                 databaseName = databaseName,
+                 cdmDatabaseSchema = cdmDatabaseSchema,
+                 cohortDatabaseSchema = cohortDatabaseSchema,
+                 oracleTempSchema = oracleTempSchema,
+                 cohortTable = cohortTable,
+                 outputFolder = outputFolder,
+                 createCohorts = F,
+                 runValidation = F,
+                 packageResults = T,
+                 minCellCount = 10,
+                 sampleSize = NULL)
+                 
+                 
+# If your target cohort is large use the sampleSize setting to sample from the cohort:
+EhdenRaPredictionValidation::execute(connectionDetails = connectionDetails,
+                 databaseName = databaseName,
+                 cdmDatabaseSchema = cdmDatabaseSchema,
+                 cohortDatabaseSchema = cohortDatabaseSchema,
+                 oracleTempSchema = oracleTempSchema,
+                 cohortTable = cohortTable,
+                 outputFolder = outputFolder,
+                 createCohorts = T,
+                 runValidation = T,
+                 packageResults = F,
+                 minCellCount = 10,
+                 sampleSize = 1000000)
+                 
 ```
 
 License
 =======
-  EHDENRAPredictionValidation is licensed under Apache License 2.0
+  EhdenRaPredictionValidation is licensed under Apache License 2.0
 
 Development
 ===========
-  EHDENRAPredictionValidation is being developed in R Studio.
+  EhdenRaPredictionValidation is being developed in R Studio.
