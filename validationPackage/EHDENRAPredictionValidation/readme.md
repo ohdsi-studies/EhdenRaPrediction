@@ -3,7 +3,7 @@ EhdenRaPredictionValidation
 
 Introduction
 ============
-This package contains code to externally validate models for the prediction quesiton <add question> developed on the database <add database>.
+This package contains code to externally validate models for the prediction of adverse health outcomes in rheumatoid arthritis (RA) developed on the database Optum Clinformatics.
 
 Features
 ========
@@ -28,7 +28,7 @@ Dependencies
   
 Guide
 ============
-A general guide for running a valdiation study package is available here: [Skeleton Validation Study guide](https://github.com/OHDSI/EhdenRaPredictionValidation/tree/master/inst/doc/UsingSkeletonValidationPackage.pdf)
+A general guide for running a validation study package is available here: [Skeleton Validation Study guide](https://github.com/ohdsi-studies/EhdenRaPrediction/blob/master/validationPackage/EHDENRAPredictionValidation/inst/doc/UsingSkeletonPredictionValidationPackage.pdf)
   
   
 A1. Installing the package from GitHub
@@ -36,7 +36,7 @@ A1. Installing the package from GitHub
 ```r
 # To install the package from github:
 install.packages("devtools")
-devtools::install_github("ohdsi-studies/EhdenRaPredictionValidation")
+devtools::install_github("ohdsi-studies/EhdenRaPrediction/validationPackage/EhdenRaPredictionValidation")
 ```
 
 A2. Building the package inside RStudio
@@ -47,7 +47,7 @@ A2. Building the package inside RStudio
 B. Getting Started
 ===============
   1. Make sure to have either: installed (A1) or built (A2) the package 
-  2. In R, run the code in 'extras/codeToRun.R' (see [Skeleton Validation Study guide](https://github.com/OHDSI/EhdenRaPredictionValidation/tree/master/inst/doc/UsingSkeletonValidationPackage.pdf) for guideance)
+  2. In R, run the code in 'extras/codeToRun.R' (see [Skeleton Validation Study guide](https://github.com/ohdsi-studies/EhdenRaPrediction/blob/master/validationPackage/EHDENRAPredictionValidation/inst/doc/UsingSkeletonPredictionValidationPackage.pdf) for guidance)
 
 
 C. Example Code
