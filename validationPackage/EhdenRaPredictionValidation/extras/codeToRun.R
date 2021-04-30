@@ -19,7 +19,7 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
                                                                 port = port)
 
 # add details of your database setting:
-cdmDatabaseName <- cdmDatabaseName
+databaseName <- databaseName
 
 # add the cdm database schema with the data
 cdmDatabaseSchema <- databaseSchemas
@@ -36,7 +36,7 @@ cohortTable <- 'EhdenRaPredictionValidationCohortTable'
 
 # Now run the study
 EhdenRaPredictionValidation::execute(connectionDetails = connectionDetails,
-                                     cdmDatabaseName = cdmDatabaseName,
+                                     databaseName = databaseName,
                                      cdmDatabaseSchema = cdmDatabaseSchema,
                                      cohortDatabaseSchema = cohortDatabaseSchema,
                                      oracleTempSchema = NULL,
