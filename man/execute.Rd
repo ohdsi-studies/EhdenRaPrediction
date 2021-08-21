@@ -79,7 +79,7 @@ in packaged results.}
 Execute the Study
 }
 \details{
-This function executes the EHDENRAPrediction Study.
+This function executes the EhdenRaPrediction Study.
 }
 \examples{
 \dontrun{

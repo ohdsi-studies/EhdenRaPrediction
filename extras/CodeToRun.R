@@ -1,8 +1,8 @@
-library(EHDENRAPrediction)
+library(EhdenRaPrediction)
 # USER INPUTS
 #=======================
 # The folder where the study intermediate and result files will be written:
-outputFolder <- "./EHDENRAPredictionResults"
+outputFolder <- "./EhdenRaPredictionResults"
 
 # Specify where the temporary files (used by the ff package) will be created:
 options(fftempdir = "location with space to save big data")
@@ -30,13 +30,14 @@ cohortDatabaseSchema <- 'work database schema'
 oracleTempSchema <- NULL
 
 # table name where the cohorts will be generated
-cohortTable <- 'EHDENRAPredictionCohort'
+cohortTable <- 'EhdenRaPredictionCohort'
 #=======================
 
 execute(connectionDetails = connectionDetails,
         cdmDatabaseSchema = cdmDatabaseSchema,
         cdmDatabaseName = cdmDatabaseName,
         cohortDatabaseSchema = cohortDatabaseSchema,
+		oracleTempSchema = oracleTempSchema,
         cohortTable = cohortTable,
         outputFolder = outputFolder,
         createProtocol = F,
@@ -44,12 +45,12 @@ execute(connectionDetails = connectionDetails,
         runAnalyses = F,
         createResultsDoc = F,
         packageResults = F,
-        createValidationPackage = F, 
+        createValidationPackage = F,  
+        #analysesToValidate = 1,
         minCellCount= 5,
         createShiny = F,
         createJournalDocument = F,
         analysisIdDocument = 1)
 
-# if you ran execute with: createShiny = T
-# Uncomment and run the next line to see the shiny app:
-# viewShiny()
+# Uncomment and run the next line to see the shiny results:
+# PatientLevelPrediction::viewMultiplePlp(outputFolder)

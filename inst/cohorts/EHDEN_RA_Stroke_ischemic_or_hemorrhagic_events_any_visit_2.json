@@ -154,6 +154,7 @@
       "OccurrenceStartDate": null,
       "ConditionType": null,
       "ConditionSourceConcept": null,
+      "ConditionStatus": null,
       "StopReason": null,
       "Age": null
     }}],

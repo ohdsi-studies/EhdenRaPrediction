@@ -1203,7 +1203,7 @@
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "83901003",
             "VOCABULARY_ID": "SNOMED",
-            "CONCEPT_NAME": "Sjögren's syndrome",
+            "CONCEPT_NAME": "SjË†gren's syndrome",
             "DOMAIN_ID": "Condition",
             "STANDARD_CONCEPT_CAPTION": "Standard",
             "CONCEPT_CLASS_ID": "Clinical Finding",
@@ -2051,11 +2051,13 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
             "Occurrence": {
               "Type": 2,
+              "CountColumn": null,
               "IsDistinct": false,
               "Count": 1
             }
@@ -2096,6 +2098,7 @@
             }},
             "Occurrence": {
               "Type": 2,
+              "CountColumn": null,
               "IsDistinct": false,
               "Count": 1
             }
@@ -2151,6 +2154,7 @@
           }},
           "Occurrence": {
             "Type": 0,
+            "CountColumn": null,
             "IsDistinct": false,
             "Count": 0
           }
@@ -2205,6 +2209,7 @@
           }},
           "Occurrence": {
             "Type": 0,
+            "CountColumn": null,
             "IsDistinct": true,
             "Count": 1
           }
@@ -2248,11 +2253,13 @@
               "OccurrenceStartDate": null,
               "ConditionType": null,
               "ConditionSourceConcept": null,
+              "ConditionStatus": null,
               "StopReason": null,
               "Age": null
             }},
             "Occurrence": {
               "Type": 0,
+              "CountColumn": null,
               "IsDistinct": false,
               "Count": 0
             }
@@ -2293,6 +2300,7 @@
             }},
             "Occurrence": {
               "Type": 0,
+              "CountColumn": null,
               "IsDistinct": false,
               "Count": 0
             }
@@ -2336,11 +2344,13 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }},
           "Occurrence": {
             "Type": 0,
+            "CountColumn": null,
             "IsDistinct": false,
             "Count": 0
           }

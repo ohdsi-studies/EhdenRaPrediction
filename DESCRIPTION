@@ -1,4 +1,4 @@
-Package: EHDENRAPrediction
+Package: EhdenRaPrediction
 Type: Package
 Title: A Package Skeleton for Patient Level Prediction Studies
 Version: 0.0.1
@@ -13,8 +13,6 @@ Imports:
     FeatureExtraction,
     PatientLevelPrediction,
     ggplot2,
-    ff,
-    ffbase,
     OhdsiSharing,
     zip,
 	ParallelLogger,
@@ -26,7 +24,8 @@ Imports:
 	jsonlite,
 	shiny,
 	shinycssloaders,
-    shinydashboard
+  shinydashboard,
+  R.utils
 Suggests:
     knitr,
     rmarkdown,

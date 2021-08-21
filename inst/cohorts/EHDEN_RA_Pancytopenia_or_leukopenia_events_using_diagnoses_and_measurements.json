@@ -299,11 +299,13 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }},
           "Occurrence": {
             "Type": 2,
+            "CountColumn": null,
             "IsDistinct": false,
             "Count": 1
           }
@@ -336,11 +338,13 @@
             "OccurrenceStartDate": null,
             "ConditionType": null,
             "ConditionSourceConcept": null,
+            "ConditionStatus": null,
             "StopReason": null,
             "Age": null
           }},
           "Occurrence": {
             "Type": 2,
+            "CountColumn": null,
             "IsDistinct": false,
             "Count": 1
           }
@@ -368,6 +372,7 @@
         "OccurrenceStartDate": null,
         "ConditionType": null,
         "ConditionSourceConcept": null,
+        "ConditionStatus": null,
         "StopReason": null,
         "Age": null
       }},
@@ -383,6 +388,7 @@
         "OccurrenceStartDate": null,
         "ConditionType": null,
         "ConditionSourceConcept": null,
+        "ConditionStatus": null,
         "StopReason": null,
         "Age": null
       }},
@@ -446,6 +452,7 @@
         "OccurrenceStartDate": null,
         "ConditionType": null,
         "ConditionSourceConcept": null,
+        "ConditionStatus": null,
         "StopReason": null,
         "Age": null
       }}

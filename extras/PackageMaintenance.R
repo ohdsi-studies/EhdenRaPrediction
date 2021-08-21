@@ -16,12 +16,12 @@
 
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
-OhdsiRTools::checkUsagePackage("EHDENRAPrediction")
+OhdsiRTools::checkUsagePackage("EhdenRaPrediction")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-shell("rm extras/EHDENRAPrediction.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/EHDENRAPrediction.pdf")
+shell("rm extras/EhdenRaPrediction.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/EhdenRaPrediction.pdf")
 
 # Create vignette ---------------------------------------------------------
 rmarkdown::render("vignettes/UsingSkeletonPackage.Rmd",
@@ -37,11 +37,11 @@ OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv"
                                                 insertTableSql = TRUE,
                                                 insertCohortCreationR = TRUE,
                                                 generateStats = FALSE,
-                                                packageName = "EHDENRAPrediction")
+                                                packageName = "EhdenRaPrediction")
 
 # Create analysis details -------------------------------------------------
 source("extras/CreatePredictionAnalysisDetails.R")
 createAnalysesDetails("inst/settings")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("EHDENRAPrediction")
+OhdsiRTools::insertEnvironmentSnapshotInPackage("EhdenRaPrediction")
