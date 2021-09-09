@@ -1,4 +1,4 @@
-Prediction of clinical outcomes after methotrexate initiation (EHDEN Study-a-thon Barcelona 2020)
+Development and external validation of prediction models for adverse health outcomes in rheumatoid arthritis: a multinational real-world cohort analysis (EHDEN Study-a-thon Barcelona 2020)
 =================================================================================================
 
 <img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
@@ -6,15 +6,15 @@ Prediction of clinical outcomes after methotrexate initiation (EHDEN Study-a-tho
 - Analytics use case(s): **Patient Level Prediction**
 - Study type: **Clinical Application**
 - Tags: **EHDEN**
-- Study lead: **Cynthia Yang**
-- Study lead forums tag: **[cynthiayang](https://forums.ohdsi.org/u/cynthiayang)**
+- Study lead: **Cynthia Yang, Ross Williams**
+- Study lead forums tag: **[cynthiayang](https://forums.ohdsi.org/u/cynthiayang), [RossW](https://forums.ohdsi.org/u/RossW)**
 - Study start date: **January 16, 2020**
 - Study end date: **-**
-- Protocol: [**Word file**](https://github.com/ohdsi-studies/EhdenRaPrediction/blob/master/documents/RA_PLP_protocol_27012020.docx)
+- Protocol: [**Word file**](https://github.com/ohdsi-studies/EhdenRaPrediction/blob/master/documents/RA_PLP_protocol_09042021.docx)
 - Publications: **-**
-- Results explorer: **-**
+- Results explorer: [**Shiny app**](https://data.ohdsi.org/EhdenRaPrediction/)
 
-Prediction of clinical outcomes after methotrexate initiation
+Prediction of adverse health outcomes after methotrexate initiation.
 
 **NOTE:** The following information below requires review from the Study Coordinator before using the package.
 
